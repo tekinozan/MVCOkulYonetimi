@@ -1,0 +1,28 @@
+﻿@model MVCOkulYonetimi.Data.Models.Entities.Ogretmen
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Öğretmen Güncelleme</h2>
+
+@using (Html.BeginForm("Guncelle", "Ogretmen", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Ad)
+        @Html.TextAreaFor(x => x.Ad, new { @class = "form-control" })
+
+        @Html.LabelFor(x => x.Soyad)
+        @Html.TextAreaFor(x => x.Soyad, new { @class = "form-control" })
+
+        @Html.LabelFor(x => x.Sinif)
+        @Html.TextAreaFor(x => x.Sinif, new { @class = "form-control" })
+
+
+    </div>
+    @Html.HiddenFor(x => x.Id)
+    <br />
+    <button type="submit" class="btn btn-success">Öğretmeni Güncelle</button>
+}
+
+
