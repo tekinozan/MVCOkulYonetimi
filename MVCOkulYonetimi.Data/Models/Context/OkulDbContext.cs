@@ -18,7 +18,7 @@ namespace MVCOkulYonetimi.Data.Models.Context
 
         public OkulDbContext()
         {
-            Database.Connection.ConnectionString = @"Server=DESKTOP-IKMJDLK\MSSQLSERVER01;Database=OkulYonetimDb;User Id=sa;Password=1234";
+            Database.Connection.ConnectionString = @"Server=**********;Database=OkulYonetimDb;User Id=*****;Password=****";
         }
 
         public DbSet<Ogrenci> Ogrenciler { get; set; }
